@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="123dp">
+
+    <View
+        android:background="@drawable/shadow3"
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="117dp"
+        android:layout_gravity="center">
+
+
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="horizontal"
+        android:paddingRight="12dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+
+
+        <ImageView
+            android:id="@+id/pic"
+            android:layout_width="117dp"
+            android:layout_height="117dp"
+            android:src="@drawable/umbrella"
+            android:scaleType="centerCrop"/>
+
+
+
+
+
+
+
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:paddingLeft="12dp"
+                android:paddingRight="13dp" >
+                <TextView
+                    android:id="@+id/item_content"
+                    android:textColor="#000000"
+                    android:textSize="18sp"
+                    android:gravity="bottom"
+                    android:layout_alignParentBottom="true"
+                    android:paddingBottom="5dp"
+                    android:layout_width="wrap_content"
+                    android:singleLine="true"
+                    android:maxEms="6"
+                    android:ellipsize="end"
+                    android:layout_height="40dp"
+                    android:paddingLeft="16dp"
+                    android:drawablePadding="10dp"
+                    android:text="快件" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/imagejifen"
+                    android:layout_toLeftOf="@+id/tv_jifen"
+                    android:layout_alignBottom="@+id/item_content"
+                    android:paddingBottom="5dp"
+                    android:src="@drawable/ic_monetization_on_black_24dp"/>
+
+                <TextView
+                    android:id="@+id/tv_jifen"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:textColor="#999999"
+                    android:text="0"
+                    android:layout_alignBottom="@+id/imagejifen"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="30dp"
+                    android:paddingBottom="5dp"/>
+
+            </RelativeLayout>
+            <View
+                android:background="@color/black2"
+                android:layout_width="fill_parent"
+                android:layout_height="1.0dip"
+                android:layout_marginLeft="15dp"/>
+
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingLeft="12dp"
+                android:paddingRight="13dp"
+                android:paddingBottom="5dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#999999"
+                    android:textSize="16sp"
+                    android:paddingTop="6dp"
+                    android:paddingRight="16dp"
+                    android:paddingLeft="16dp"
+                    android:maxEms="5"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:id="@+id/item_username"
+
+                    android:text="张俊东"/>
+
+                <ImageView
+                    android:id="@+id/IV_location"
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:src="@drawable/location"
+                    android:layout_alignBottom="@+id/item_place"
+                    android:layout_toEndOf="@+id/item_username" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#999999"
+                    android:textSize="16sp"
+                    android:paddingTop="6dp"
+                    android:layout_toRightOf="@+id/IV_location"
+                    android:singleLine="true"
+                    android:maxEms="7"
+                    android:ellipsize="end"
+                    android:id="@+id/item_place"
+
+                    android:text="三号楼"/>
+
+                <ImageView
+                    android:id="@+id/iv_done"
+                    android:visibility="visible"
+                    android:src="@mipmap/iv_done"
+                    android:layout_height="20dp"
+                    android:layout_width="20dp"
+                    android:layout_alignBottom="@+id/item_time"
+                    android:layout_toLeftOf="@+id/item_time"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#AAAAAA"
+                    android:textSize="12sp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentEnd="true"
+                    android:id="@+id/item_time"
+                    android:paddingBottom="2.5dp"
+                    android:text="2016年7月14日16:06" />
+
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:id="@+id/flag"
+            android:text="0"
+            />
+
+    </LinearLayout>
+
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:id="@+id/IV_flag"
+            />
+
+    </RelativeLayout>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="@drawable/shadow" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/purewhite" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:id="@+id/tv_num"
+        android:text=""/>
+
+</LinearLayout>
