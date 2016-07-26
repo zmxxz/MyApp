@@ -1,0 +1,431 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+
+
+
+        <include layout="@layout/layout_title"/>
+
+
+
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/titleBar"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@+id/linearLayout"
+        android:id="@+id/fragment_container"
+        android:background="#ffffff"
+        android:layout_weight="1" >
+
+
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:fab="http://schemas.android.com/apk/res-auto"
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/LLhome"
+            android:visibility="visible"
+            >
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <android.support.v4.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:id="@+id/swipe_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+
+
+            <com.example.chenjunfan.myapplication.LoadListView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:divider="@color/purewhite"
+                android:paddingTop="10dp"
+                android:clipToPadding="false"
+                android:id="@+id/LVmain"
+                >
+            </com.example.chenjunfan.myapplication.LoadListView>
+
+                </android.support.v4.widget.SwipeRefreshLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="6dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@drawable/shadow2" />
+            </FrameLayout>
+
+            <com.example.chenjunfan.myapplication.FloatingActionsMenu
+                android:id="@+id/multiple_actions"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                fab:fab_addButtonColorNormal="@color/white"
+                fab:fab_addButtonColorPressed="@color/white_pressed"
+                fab:fab_addButtonPlusIconColor="@color/half_black"
+                fab:fab_labelStyle="@style/menu_labels_style"
+                android:layout_marginBottom="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginEnd="16dp">
+
+                <com.example.chenjunfan.myapplication.FloatingActionButton
+                    android:id="@+id/action_a"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    fab:fab_colorNormal="@color/pink"
+                    fab:fab_icon="@mipmap/send"
+                    fab:fab_colorPressed="@color/pink_pressed"/>
+
+
+
+            </com.example.chenjunfan.myapplication.FloatingActionsMenu>
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/RLme"
+            android:visibility="invisible"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:weightSum="1">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="6dp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@drawable/shadow2" />
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal">
+
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="64dp"
+                        android:layout_marginBottom="18dp"
+                        android:layout_marginTop="10dp" >
+
+                        <com.example.chenjunfan.myapplication.CircleImageView
+                            app:border_width="2dp"
+                            app:border_color="@color/purewhite"
+                            android:id="@+id/iv_home_touxiang"
+                            android:layout_width="64dp"
+                            android:layout_height="64dp"
+                            android:layout_marginLeft="15dp"
+                            android:src="@drawable/qqtouxiang"
+                            android:scaleType="centerCrop"/>
+
+                        <LinearLayout
+                            android:id="@+id/ll_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="16dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_toRightOf="@id/iv_home_touxiang"
+                            android:orientation="horizontal" >
+
+                            <TextView
+                                android:id="@+id/tv_name"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="张俊东"
+                                android:textColor="#353535"
+                                android:textSize="18sp" />
+
+                            <TextView
+                                android:id="@+id/tv_gender"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="16dp"
+                                android:text="男"
+                                android:textColor="#353535"
+                                android:textSize="18sp"/>
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/tv_accout"
+                            android:layout_marginLeft="16dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_below="@+id/ll_name"
+                            android:layout_toRightOf="@id/iv_home_touxiang"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="学号：161430319"
+                            android:textColor="#AAAAAA"
+                            android:textSize="14sp" />
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/LL_orders"
+                        android:orientation="vertical"
+                        android:layout_width="fill_parent"
+                        android:background="@drawable/setting_item_selector"
+                        android:layout_height="51dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="20dp"
+                                android:src="@drawable/order"/>
+
+                            <TextView
+                                style="@style/TxtTitle"
+                                android:textSize="16sp"
+                                android:gravity="center_vertical"
+                                android:layout_width="fill_parent"
+                                android:layout_height="50dp"
+                                android:paddingLeft="16dp"
+                                android:paddingRight="16dp"
+                                android:drawablePadding="10dp"
+                                android:text="我的订单" />
+                        </LinearLayout>
+                        <View
+                            android:background="@color/black2"
+                            android:layout_width="fill_parent"
+                            android:layout_height="1.0dip" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/LL_coin"
+                        android:orientation="vertical"
+                        android:layout_width="fill_parent"
+                        android:layout_height="51dp"
+                        android:background="@drawable/setting_item_selector">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="20dp"
+                                android:src="@drawable/coin"/>
+
+                            <TextView
+                                style="@style/TxtTitle"
+                                android:textSize="16sp"
+                                android:gravity="center_vertical"
+                                android:layout_width="fill_parent"
+                                android:layout_height="50dp"
+                                android:paddingLeft="16dp"
+                                android:paddingRight="16dp"
+                                android:drawablePadding="10dp"
+                                android:text="积分" />
+                        </LinearLayout>
+                        <View
+                            android:background="@color/black2"
+                            android:layout_width="fill_parent"
+                            android:layout_height="1.0dip" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/LL_edit"
+                        android:orientation="vertical"
+                        android:layout_width="fill_parent"
+                        android:layout_height="51dp"
+                        android:background="@drawable/setting_item_selector">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="20dp"
+                                android:src="@drawable/edit"/>
+
+                            <TextView
+                                style="@style/TxtTitle"
+                                android:textSize="16sp"
+                                android:gravity="center_vertical"
+                                android:layout_width="fill_parent"
+                                android:layout_height="50dp"
+                                android:paddingLeft="16dp"
+                                android:paddingRight="16dp"
+                                android:drawablePadding="10dp"
+                                android:text="信息编辑" />
+                        </LinearLayout>
+                        <View
+                            android:background="@color/black2"
+                            android:layout_width="fill_parent"
+                            android:layout_height="1.0dip" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/LL_setting"
+                        android:orientation="vertical"
+                        android:layout_width="fill_parent"
+                        android:layout_height="51dp"
+                        android:background="@drawable/setting_item_selector">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="20dp"
+                                android:src="@drawable/setting"/>
+
+                            <TextView
+                                style="@style/TxtTitle"
+                                android:textSize="16sp"
+                                android:gravity="center_vertical"
+                                android:layout_width="fill_parent"
+                                android:layout_height="50dp"
+                                android:paddingLeft="16dp"
+                                android:paddingRight="16dp"
+                                android:drawablePadding="10dp"
+                                android:text="设置" />
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+
+
+
+        </RelativeLayout>
+    </FrameLayout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical" >
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.1dp"
+            android:background="#AAAAAA" />
+
+
+        <LinearLayout
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:orientation="horizontal"
+            android:id="@+id/linearLayout"
+            android:weightSum="2" >
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:gravity="center"
+                android:layout_centerHorizontal="true"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:id="@+id/RL_home">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_weight="1"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/home_pressed"
+                android:id="@+id/IV_home"
+                />
+                <TextView
+                    android:id="@+id/tv_home"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/IV_home"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="3dp"
+                    android:text="首页"
+                    android:textColor="@color/button_g"
+                    android:textSize="12sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:gravity="center"
+                android:layout_centerHorizontal="true"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:id="@+id/RL_me">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_weight="1"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/me_normal"
+                android:id="@+id/IV_me"
+                />
+
+                <TextView
+                    android:id="@+id/tv_me"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/IV_me"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="3dp"
+                    android:text="我的"
+                    android:textColor="#9A9A9A"
+                    android:textSize="12sp" />
+
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+
+</LinearLayout>
